@@ -4,7 +4,7 @@ public class CadrastoProduto {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] nomes = new String[5];
+        String[] produto = new String[5];
         int[] quant = new int[5];
 
         int qtd = 0;
@@ -29,13 +29,13 @@ public class CadrastoProduto {
 
             switch (opcao) {
                 case 1:
-                    if (qtd == nomes.length){
+                    if (qtd == produto.length){
                         System.out.println("LISTA CHEIA! NÃO É POSSIVEL CADASTRAR");
                         break;
                     }
 
                     System.out.println("Digite o nome do produto: ");
-                    nomes[qtd] = sc.nextLine();
+                    produto[qtd] = sc.nextLine();
 
                     System.out.println("Digite a quantidade do produto: ");
                     quant[qtd] = sc.nextInt();
@@ -51,7 +51,7 @@ public class CadrastoProduto {
                 }
                     System.out.println("\nDados cadrastados: ");
                     for (int i = 0; i<5; i++){
-                        System.out.println(i+ "-" +nomes[1] + "-" + quant[1] + "anos");
+                        System.out.println(i+ "-" +produto[1] + "-" + quant[1] + "quantidades");
                     }
                     break;
                 
@@ -61,21 +61,21 @@ public class CadrastoProduto {
                         break;
                     }
 
-                    System.out.println("Digite o nome que quer buscar: ");
+                    System.out.println("Digite o produto que quer buscar: ");
                     String busca = sc.nextLine();
 
                     int posBusca = -1;
                     for (int i = 0; i < qtd; i++) {
-                        if (nomes [i].equalsIgnoreCase(busca)) {
+                        if (produto [i].equalsIgnoreCase(busca)) {
                             posBusca = i;
                             break;
                         }
                     }
 
                     if (posBusca== -1) {
-                        System.out.println("Pessoa não encontrada.");
+                        System.out.println("Produto não encontrada.");
                     } else {
-                        System.out.println("Encontrado: "+ nomes [posBusca] + "-" + quant[posBusca]+ "anos");
+                        System.out.println("Encontrado: "+ produto [posBusca] + "-" + quant[posBusca]+ "anos");
                     }
                     break;
                     case 4: 
@@ -84,12 +84,12 @@ public class CadrastoProduto {
                         break;
                     }
 
-                    System.out.println("Digite um  nome para alterar: ");
-                    String nomeAlterar = sc.nextLine();
+                    System.out.println("Digite um produto para alterar: ");
+                    String produtoAlterar = sc.nextLine();
 
                     int posAlt = -1;
                     for (int i = 0; i <qtd; i++) {
-                        if (nomes[i].equalsIgnoreCase(nomeAlterar)) {
+                        if (produto[i].equalsIgnoreCase(produtoAlterar)) {
                             posAlt = i;
                             break;
                         }
@@ -97,24 +97,51 @@ public class CadrastoProduto {
                         if (posAlt == -1) {
                             System.out.println("Pessoa não encontrada.");
                         } else {
-                            System.out.println("Novo nome: ");
-                            String novoNome = sc.nextLine();
+                            System.out.println("Novo produto: ");
+                            String novoProduto = sc.nextLine();
                             
                             System.out.println("Nova Quantidade: ");
                             int novaQuant = sc.nextInt();
                             sc.nextLine();
 
-                            nomes[posAlt] = novoNome;
+                            produto[posAlt] = novoProduto;
                             quant[posAlt] = novaQuant;
 
                             System.out.println("Alterado com sucesso!");
+                        }}
+                        break; 
+                    
+                        case 5:
+                        if (qtd == 0) {
+                            System.out.println("Nenhum produto.");
+                            break;
+                        }
+                        System.out.println("Digite o nome do produto para remover: ");
+                        String produtoRemover = sc.nextLine();
+
+                        int posRem =-1;
+                        for (int i =0; i < qtd;i++ ){
+                            if (produto[i].equalsIgnoreCase(produtoRemover)) {
+                                posRem = i;
+                                break;
+                            }
+                        }
+                        if (posRem == -1) {
+                            System.out.println("Produto não encontrado!");
+                        } else {
+                            for (int i = posRem; i < qtd - 1; i++) {
+                                produto[i] = produto [i + 1];
+                                quant[i] = quant [i + 1];
+                            }
+                            produto[qtd - 1] = null;
+                            quant[qtd - 1] = 0;
+
+                            qtd--;
+                            System.out.println("Produto removido com sucesso!");
                         }
                         break;
-
-                        case 5:
-
-                    
                 default:
+                    System.out.println("Opção inválida!");
                     break;
             }
         }
