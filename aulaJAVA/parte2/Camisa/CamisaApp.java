@@ -1,4 +1,4 @@
-package parte2;
+package Camisa;
 
 public class CamisaApp {
     public static void main(String[] args) {

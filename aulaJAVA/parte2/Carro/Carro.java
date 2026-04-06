@@ -1,4 +1,4 @@
-package parte2;
+package Carro;
 
 public class Carro {
     // Atributos privados (encapsulamento)

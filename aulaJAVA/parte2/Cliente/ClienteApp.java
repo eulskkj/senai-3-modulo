@@ -1,4 +1,4 @@
-package parte2.Cliente;
+package Cliente;
 
 public class ClienteApp {
 

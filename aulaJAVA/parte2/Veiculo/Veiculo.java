@@ -1,4 +1,4 @@
-package parte2.Veiculo;
+package Veiculo;
 
 public class Veiculo {
     private String marca;

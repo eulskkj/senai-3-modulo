@@ -1,4 +1,4 @@
-package parte2;
+package Pessoa;
 
 // Pessoa.java
 public class Pessoa {

@@ -1,4 +1,4 @@
-package parte2.Funcionário;
+package Funcionário;
 
 import java.util.Scanner;
 

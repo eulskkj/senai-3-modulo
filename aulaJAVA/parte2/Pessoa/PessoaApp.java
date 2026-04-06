@@ -1,5 +1,5 @@
 
-package parte2;
+package Pessoa;
 
 public class PessoaApp {
     public static void main(String[] args) {
