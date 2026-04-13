@@ -1,3 +1,4 @@
+package ArList;
 import java.util.Scanner;
 
 public class ArListMenu {

@@ -1,3 +1,4 @@
+package ArList;
 public class ArList02 {
     public static void main(String[] args) {
         java.util.ArrayList<Integer> numeros = new java.util.ArrayList<>();

@@ -1,3 +1,4 @@
+package MostarErroException;
 import java.util.Scanner;
 
 public class Ex04 {
