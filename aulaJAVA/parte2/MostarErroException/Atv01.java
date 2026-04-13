@@ -20,7 +20,7 @@ public class Atv01 {
                 System.out.println("Erro: Saldo insuficiente para esta operação!");
             } else {
                 saldo -= valorSaque;
-                System.out.println("Ssque realizado com sucesso! Novo saldo: "+saldo);
+                System.out.println("Saque realizado com sucesso! Novo saldo:R$ "+saldo);
             }
 
         } catch(InputMismatchException e) {
