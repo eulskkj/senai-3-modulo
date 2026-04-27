@@ -1,0 +1,1 @@
+Olá,este é um exemplo de escrita em arquivos
