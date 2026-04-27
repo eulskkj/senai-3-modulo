@@ -1,4 +1,4 @@
-package AlterarArray;
+package AlterarArray1;
 import java.util.Scanner;
 
 public class AlterarArrayEntrada {
