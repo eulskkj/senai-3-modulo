@@ -17,7 +17,7 @@ janela.resizable(False, False)
 janela.title('Sistema de acesso')
 
 # muda a foto da janela
-janela.iconbitmap('01.ico')
+janela.iconbitmap('Janela/01.ico')
 
 
 # elementos de dentro da janela
